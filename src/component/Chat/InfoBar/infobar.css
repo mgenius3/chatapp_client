@@ -1,0 +1,66 @@
+.infobar{
+	width:100%;
+	align-self: flex-start;
+	background:yellow; 
+}
+.infobar .OuterContainer{
+	width:100%;
+	background-color: hsl(2, 57%, 40%);
+background-image: repeating-linear-gradient(transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
+repeating-linear-gradient(270deg, transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
+repeating-linear-gradient(125deg, transparent, transparent 2px, rgba(0,0,0,.2) 2px, rgba(0,0,0,.2) 3px, transparent 3px, transparent 5px, rgba(0,0,0,.2) 5px);
+}
+/*for Innercontainer */
+.infobar .InnerContainer{
+	width:90%;
+	margin:auto;
+	padding:0px;
+	display:flex;
+	justify-content:space-around;
+	color:goldenrod;
+}
+.infobar .InnerContainer>.room_name{
+	padding-left:2px;
+	font-size:12px;
+	flex:1;
+}
+.infobar .InnerContainer>p{
+	color:skyblue;
+	padding:0px;
+	margin-left:4px;
+}
+.infobar .InnerContainer>img{
+	align-self:center;
+	width:20px;
+	height:20px;
+	border-radius: 50%;
+
+}
+.infobar .InnerContainer>a{
+	text-decoration: none;
+	align-self: center;
+	color:white;
+	font-weight:bolder;
+}
+.infobar .InnerContainer>a:hover{
+	color:yellow;
+} 
+.infobar .InnerContainer>a:active{
+	color:green;
+}
+.infobar .InnerContainer>select{
+	box-sizing:border-box;
+	margin:3px;
+	border-radius:20px;
+	padding:1px;
+	background:silver;
+	border:5px solid rgba(0,0,273,0.5);
+}
+
+.infobar .InnerContainer>select>option[class="center"]{
+	color:blue;
+	text-align:center;
+	padding:3px;
+	font-family:monospace;
+	font-size:12px;
+}

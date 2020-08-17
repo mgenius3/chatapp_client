@@ -1,0 +1,66 @@
+.messageContainer{
+	/*display:flex;
+	flex-direction:row;
+	justify-content:flex-start;*/
+	margin:4px 4px;
+	line-height: 1;
+}
+.justifyStart{
+	box-sizing:border-box;
+	background:black;
+	color:white;
+	border-radius:10px;
+	border-width: 3px;
+	border-style: solid;
+	border-color: transparent transparent #fff transparent;
+	align-self:flex-start;
+	border-bottom-left-radius: 0px;
+	display:flex;
+	flex-direction: column;
+}
+
+.justifyEnd{
+	box-sizing:border-box;
+	background:white;
+	margin:2px 4px;
+	border-radius:10px;
+	 border-width: 3px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+    border-top-right-radius:0px;
+	align-self:flex-end;
+	display:flex;
+	align-items: flex-end;
+	flex-direction: column;
+}
+.messageContainer > .sentText{
+	color:grey;
+	font-family:cursive;
+	font-size:5%;
+	font-weight: bolder;
+	font-style:italic;
+	padding:0px;
+	margin:0px;
+}
+.messageContainer .time{
+	padding:0;
+	margin:0;
+	font-size:8px;
+	color:grey;
+}
+.justifyStart .otherusertime{
+	text-align: right;
+}
+.messageContainer >.messageBox{
+	font-family:monospace;
+	padding:2px;
+	margin-top:-15px;
+}
+@media only screen and (max-width:260px){
+	.messageContainer {
+        font-size:0.8em;
+	}
+	.justifyStart .otherusertime,.justifyEnd .sentText{
+		margin-bottom:5px;
+	}
+}

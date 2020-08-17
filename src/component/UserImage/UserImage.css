@@ -1,0 +1,222 @@
+.my_img>*:focus{
+ outline: none;
+}
+.my_img {
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	transition: ease-in 2s;
+	opacity: 1;
+}
+.my_img > .img{background:black; text-align: center;border-radius: 3px}
+.my_img > .error{
+	box-sizing: border-box;
+	background:grey;
+	color:white;
+	display:block;
+	border-radius: 3px;
+	font-family: monospace;
+	text-shadow: 1px 1px 1px black;
+	transition:all linear 2s;
+	position: absolute;
+	top:10px;
+	background:midnightblue;padding:30px;
+}
+.my_img>.error>sup{
+	color:red;
+	cursor:pointer;
+	position: absolute;
+	top:0px;right: 0px;
+	font-size:30px;
+}
+
+.my_img>.error>sup:hover{
+	color:yellow;
+}
+.my_img > .toolupload {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 3px;
+}
+
+.my_img button {
+	background-color: green;
+	color: white;
+	border: none;
+	font-family: cursive;
+	border-radius: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+	padding:3px 15px;
+	letter-spacing: 1.4px;
+	font-weight: bolder;
+}
+.my_img button:hover{
+	background-color:blue;
+}
+.my_img button:active{
+	position: relative;
+	top:3px;left:3px;
+}
+.my_img button:focus{
+	outline: none;
+}
+.my_img > .img {
+	width: 30vw;
+	height: auto;
+}
+.my_img > .img > img {
+	width: 30vw;
+	height: 30vw;
+	border-radius: 50%;
+	box-sizing: content-box;
+}
+.my_img .imgupload::-webkit-file-upload-button{
+	visibility: hidden;
+}
+
+.my_img .imgupload::-webkit-file-upload-text{
+	visibility: hidden;
+}
+.my_img .imguploaded::-webkit-file-upload-button{
+	visibility: hidden;
+}
+
+.my_img .imgupload::before{
+	content: "select image";
+	visibility: visible;
+	display: inline-block;
+   background: linear-gradient(0deg,#e3e3e3,#f9f9f9);
+   border-radius: 3px;
+   padding:5px 80px;
+   outline:none;
+   white-space: nowrap;
+   -webkit-user-select:none;
+   margin:0 auto;
+   cursor: pointer;
+   color:#888888;      
+   text-shadow:1px 1px #fff;
+   font-size:10px;
+   font-weight: bolder;
+
+}
+
+.my_img .imguploaded::before{
+	content:"image selected";
+	display: inline-block;
+   background: linear-gradient(0deg,#e3e3e3,#f9f9f9);
+   border-radius: 5px;
+   padding:8px 100px;
+   border-top-right-radius: 5px;
+   outline:none;
+   white-space: nowrap;
+   -webkit-user-select:none;
+   margin:0 auto;
+   cursor: pointer;
+   color:#888888;      
+   text-shadow:1px 1px #fff;
+   font-size:10px;
+   font-weight: bolder
+}
+.my_img .imgupload:hover::before{
+	border-color:black;
+}
+.my_img .imgupload:active::before{
+	background: linear-gradient(0deg,#e3e3e3,#f9f9f9)
+}
+
+.my_img input[type="file" i],
+.my_img label {
+	border: none;
+	font-family: monospace;
+	padding: 3px;
+}
+.my_img input[type='file' i]:focus{
+	outline:none;
+}
+.my_img > label {
+	color: red;
+}
+.my_img .ready {
+	margin: 20px;
+}
+.my_img .ready > a {
+	box-sizing: border-box;
+	background: silver;
+	padding:10px 30px;margin-top:10px;
+	border-radius: 5px;
+	color: white;
+	letter-spacing: 1px;
+	font-family: monospace;
+	text-decoration: none;
+	text-shadow: 1.5px 1px 1px rgba(0,0,0,0.7);
+}
+.my_img .ready > a:hover, .my_img .ready > a:active{
+	background-color:red;
+	opacity:0.7;
+}
+.my_img .transition {
+	display: flex;
+	justify-content: center;
+	width: 30px;
+	height: 30px;
+	border-left: 2px solid green;
+	border-top-left-radius: 50%;
+	border-bottom-left-radius: 50%;
+	animation: loading 1s linear 0s infinite;
+}
+
+@keyframes loading {
+	from {
+		transform: rotate(0deg);
+		border-left: 2px solid green;
+	}
+	to {transform: rotate(360deg);border-left: 2px solid red;}
+}
+@media only screen and (max-width:400px){
+	.my_img>.error{width:80%;}
+}
+@media only screen and (max-width:300px){
+	.my_img{
+		width:100%;
+		height:100%;
+	}
+	.my_img .imgupload::before,.my_img .imguploaded::before{
+		box-sizing: border-box;
+		width:70%;
+		padding:10px 0px;
+		margin:0 50px;
+		text-align: center;
+	}
+}
+@media only screen and (max-width:230px){
+	.my_img{
+		width:100%;
+	}
+	.my_img .imgupload::before,.my_img .imguploaded::before{
+		width:60%;
+	}
+}
+@media only screen and (max-width:150px){
+	.my_img{
+	 margin-left:30px;
+	 width:100%;
+	}
+}
+@media only screen and (max-width:100px){
+	.my_img button{
+		font-size:10px;
+		font-style: italic;
+	}
+	.my_img{
+		margin-left:40px;
+	}
+}
